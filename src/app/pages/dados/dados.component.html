@@ -1,0 +1,12 @@
+<div class="jumbotron text-center">
+  <button class="btn btn-success" (click)="tirarDado()">Tirar dados</button>
+</div>
+
+<div class="images">
+   <img  class="images-dado" [src]="dadoIzquierdo" alt="" width="200">
+   <img class="images-dado" [src]="dadoDerecho" alt="" width="200">
+</div>
+
+<div class="text-center" *ngIf="num1 == num2">
+  <h1 [ngStyle]="{'font-size':'25px'}" class="badge bg-success">Ganaste 🤣😂</h1>
+</div>

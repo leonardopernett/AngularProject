@@ -1,8 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { EmpleadoPadreComponent } from './pages/empleados/components/empleado-padre/empleado-padre.component';
 
-const routes: Routes = [];
-
+const routes: Routes = [
+  {
+    path:'', redirectTo:'/empleados', pathMatch:'full'
+  },
+  { path: 'piano', loadChildren: () => import('./pages/piano/piano.module').then(m => m.PianoModule) },
+  { path: 'dados', loadChildren: () => import('./pages/dados/dados.module').then(m => m.DadosModule) },
+  {
+    path:'empleados',component:EmpleadoPadreComponent
+  }
+]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

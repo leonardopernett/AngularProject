@@ -1,0 +1,29 @@
+<app-empleado-hijo [empleados]="empleados" (radioButton)="getEmpleados($event)" ></app-empleado-hijo>
+
+<div class="card mt-3">
+  <div class="card-body">
+      <table class="table table-striped">
+         <thead>
+           <tr>
+             <th>#</th>
+             <th>Nombre</th>
+             <th>apellido</th>
+             <th>genero</th>
+             <th>salario</th>
+           </tr>
+         </thead>
+         <tbody>
+           <ng-container *ngFor="let empleado of empleados">
+              <tr *ngIf="genero == empleado.genero || genero == 'todos' ">
+                <td>{{empleado.id}}</td>
+                <td>{{empleado.nombre}}</td>
+                <td>{{empleado.apellido}}</td>
+                <td>{{empleado.genero}}</td>
+                <td>{{empleado.salario}}</td>
+              </tr>
+           </ng-container>
+          
+         </tbody>
+      </table>
+  </div>
+</div>

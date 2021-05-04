@@ -1,0 +1,43 @@
+<div class="card mt-5">
+  <div class="card-body">
+        <div class="form-check form-check-inline">
+            <input 
+               class="form-check-input" 
+               type="radio" 
+               name="inlineRadioOptions" 
+               id="todos" 
+               [(ngModel)]="radioSelect"
+               (change)="changeData()"
+               value="todos">
+            <label class="form-check-label" for="todos">Todos {{todos}} </label>
+        </div>
+          
+
+        <div class="form-check form-check-inline">
+          <input
+           class="form-check-input" 
+           type="radio" 
+           name="inlineRadioOptions" 
+           [(ngModel)]="radioSelect"
+           (change)="changeData()"
+           id="masculino" 
+           value="masculino">
+          <label class="form-check-label" for="masculino" >Masculino {{masculino}}</label>
+      </div>
+        
+
+      <div class="form-check form-check-inline">
+        <input 
+          class="form-check-input" 
+          type="radio" 
+          name="inlineRadioOptions" 
+          id="femenino" 
+          [(ngModel)]="radioSelect"
+          (change)="changeData()"
+          value="femenino">
+        <label class="form-check-label" for="femenino">Femenino {{femenino}}</label>
+    </div>
+
+  </div>
+</div>
+
