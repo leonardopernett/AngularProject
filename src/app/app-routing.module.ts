@@ -4,12 +4,15 @@ import { EmpleadoPadreComponent } from './pages/empleados/components/empleado-pa
 
 const routes: Routes = [
   {
-    path:'', redirectTo:'/empleados', pathMatch:'full'
+    path:'', redirectTo:'/preguntas', pathMatch:'full'
   },
   { path: 'piano', loadChildren: () => import('./pages/piano/piano.module').then(m => m.PianoModule) },
   { path: 'dados', loadChildren: () => import('./pages/dados/dados.module').then(m => m.DadosModule) },
   {
     path:'empleados',component:EmpleadoPadreComponent
+  },
+  {
+    path:'preguntas', loadChildren: ()=> import('./pages/preguntas/preguntas.module').then(m => m.PreguntasModule)
   }
 ]
 @NgModule({
