@@ -6,21 +6,20 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { DestacarDirective } from './directives/destacar.directive';
 import { EmpleadosModule } from './pages/empleados/empleados.module';
-import { DashboardComponent } from './pages/components/dashboard/dashboard.component';
-
+import {NgSelect2Module} from 'ng-select2'
 
 @NgModule({
   declarations: [
     AppComponent,
-    DestacarDirective,
-    DashboardComponent,
-
+    DestacarDirective, 
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    EmpleadosModule
+    EmpleadosModule,
+    NgSelect2Module
   ],
   providers: [],
   bootstrap: [AppComponent]
